@@ -227,27 +227,45 @@ export default function HABProject() {
         <Section id="results" title="Results (Selected)">
           <div className="grid md:grid-cols-2 gap-6">
             <figure className="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm">
-              <div className="aspect-video w-full rounded-lg bg-gradient-to-br from-sky-50 to-white border border-dashed border-sky-200 flex items-center justify-center text-sm text-sky-700">
-                Drop your FCNN vs. Ground Truth figure here
-              </div>
+              <img
+                src="/assets/fcnn-vs-truth.png"
+                alt="Seasonal chlorophyll pattern — FCNN prediction vs composite ground truth"
+                loading="lazy"
+                decoding="async"
+                width="1600"  // set your real image width
+                height="900"  // set your real image height
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
               <figcaption className="mt-3 text-sm text-gray-600">
                 FCNN seasonal chlorophyll pattern vs. composite imagery.
               </figcaption>
             </figure>
             <figure className="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm">
-              <div className="aspect-video w-full rounded-lg bg-gradient-to-br from-emerald-50 to-white border border-dashed border-emerald-200 flex items-center justify-center text-sm text-emerald-700">
-                Drop your ConvLSTM PSNR/SSIM chart here
-              </div>
+              <img
+                src="/assets/convlstm-metrics.png"
+                alt="ConvLSTM evaluation — PSNR and SSIM across channels and dates"
+                loading="lazy"
+                decoding="async"
+                width="1600"
+                height="900"
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
               <figcaption className="mt-3 text-sm text-gray-600">
                 Structural similarity metrics across channels and dates.
               </figcaption>
             </figure>
             <figure className="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm md:col-span-2">
-              <div className="aspect-[2/1] w-full rounded-lg bg-gradient-to-br from-rose-50 to-white border border-dashed border-rose-200 flex items-center justify-center text-sm text-rose-700">
-                Drop your Microcystis probability map here
-              </div>
+              <img
+                src="/assets/microcystis-map.png"
+                alt="Ensemble Microcystis probability overlay on basemap"
+                loading="lazy"
+                decoding="async"
+                width="2000"
+                height="1000"
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
               <figcaption className="mt-3 text-sm text-gray-600">
-                Ensemble probability mask (red alpha) overlaying true‑color or basemap.
+                Ensemble probability mask (red alpha) overlaying basemap.
               </figcaption>
             </figure>
           </div>
