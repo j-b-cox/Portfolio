@@ -1,12 +1,91 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website, built with **React**, **Tailwind
+CSS**, and **Framer Motion**. It showcases selected projects, technical
+reports, and creative work with a modern, minimal design.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Responsive design** --- Optimized for desktop, tablet, and mobile.
+-   **Smooth animations** --- Section fades and transitions powered by
+    [Framer Motion](https://www.framer.com/motion/).
+-   **Tailwind CSS utility classes** --- Clean, customizable styling
+    without writing lots of custom CSS.
+-   **Routing** --- Project pages managed with [React
+    Router](https://reactrouter.com/).
+-   **Project pages** --- Dedicated writeups with links to full reports
+    (e.g., HAB Forecasting Technical Report).
+-   **PDF Integration** --- Technical documents can be opened or
+    downloaded directly from the site.
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    portfolio/
+    ├── public/               # Static assets (PDFs, images, favicon, etc.)
+    │   └── assets/
+    │       └── Technical_Report.pdf
+    ├── src/
+    │   ├── components/       # Reusable UI components
+    │   ├── pages/            # Individual pages (Home, HABProject, etc.)
+    │   │   └── HABProject.jsx
+    │   ├── App.jsx           # App-level routing
+    │   ├── index.css         # Tailwind CSS entry
+    │   └── main.jsx          # React entry point
+    ├── tailwind.config.js    # Tailwind customization
+    ├── package.json
+    └── README.md             # Project documentation
+
+## 🛠️ Getting Started
+
+### 1. Clone the repo
+
+``` bash
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+```
+
+### 2. Install dependencies
+
+``` bash
+npm install
+```
+
+### 3. Run the development server
+
+``` bash
+npm run dev
+```
+
+The site will be available at <http://localhost:5173> (Vite default).
+
+### 4. Build for production
+
+``` bash
+npm run build
+npm run preview
+```
+
+## 📑 Adding Projects
+
+To add a new project page: 1. Create a new file in `src/pages/` (e.g.,
+`MyProject.jsx`). 2. Follow the structure in `HABProject.jsx` for
+consistency. 3. Add a route in `App.jsx`. 4. Place supporting files
+(images, PDFs) into `public/assets/`.
+
+## 🌐 Deployment
+
+The site can be deployed easily on: - [Vercel](https://vercel.com/)\
+- [Netlify](https://www.netlify.com/)\
+- [GitHub Pages](https://pages.github.com/)
+
+For Vercel:
+
+``` bash
+npm run build
+vercel deploy
+```
+
+## 📄 License
+
+This portfolio is released under the MIT License. You're welcome to fork
+and adapt it for your own use.
