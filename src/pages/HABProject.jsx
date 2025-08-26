@@ -30,7 +30,7 @@ const Pill = ({ children }) => (
 );
 
 export default function HABProject() {
-  const pdfHref = "/assets/Technical_Report.pdf";
+  const pdfHref = "/public/assets/Technical_Report.pdf";
 
   return (
     <div className="min-h-screen bg-white">
