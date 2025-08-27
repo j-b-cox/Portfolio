@@ -88,20 +88,151 @@ function Projects() {
     <section id="projects" className="py-12 bg-gray-50 px-12">
       <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-4xl font-bold text-center mb-12">Projects</motion.h2>
       <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2">
-        <Link to="/projects/hab">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer">
-            <h3 className="text-2xl font-semibold mb-2">Modernizing Harmful Algal Bloom Forecasting</h3>
-            <p className="text-gray-600">ML models and satellite imagery for forecasting cyanobacteria in Western Lake Erie.</p>
-          </motion.div>
-        </Link>
-        {["Data Dashboard", "AI Research Project"].map((title, i) => (
-          <Link key={i} to={`/projects/${title.toLowerCase().replace(/\s+/g, "-")}`}>
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (i + 1) * 0.15, duration: 0.8 }} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer">
-              <h3 className="text-2xl font-semibold mb-3">{title}</h3>
-              <p className="text-gray-600">Brief description. Highlight tech, challenges, and impact.</p>
-            </motion.div>
-          </Link>
-        ))}
+        {/* Modernizing HAB Forecasting - download tile */}
+        <a
+        href="/assets/HAB_Forecasting.pdf"
+        download="HAB_Forecasting.pdf"
+        className="group block"
+        >
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer"
+        >
+            <h3 className="text-2xl font-semibold mb-2">
+                Modernizing Harmful Algal Bloom Forecasting
+            </h3>
+            <p className="text-gray-600">
+                Using ML models and satellite imagery to forecast cyanobacteria blooms in Western Lake Erie.
+            </p>
+            <span className="mt-3 inline-flex items-center text-sm text-blue-700 group-hover:underline">
+                Download Report
+            <svg viewBox="0 0 24 24" className="ml-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 5v10m0 0l-4-4m4 4l4-4" />
+                <path d="M4 19h16" />
+            </svg>
+            </span>
+        </motion.div>
+        </a>
+        
+        {/* PMN - download tile */}
+        <a
+        href="placeholder"
+        download="placeholder"
+        className="group block"
+        >
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer"
+        >
+            <h3 className="text-2xl font-semibold mb-2">
+                Visualizing NOAA Algae Observations.
+            </h3>
+            <p className="text-gray-600">
+                Using Javascript (d3.js) to plot 20+ years of US algae observations according to phylogeny, location, and datetime.
+            </p>
+            <span className="mt-3 inline-flex items-center text-sm text-blue-700 group-hover:underline">
+                Visit Webpage
+            <svg viewBox="0 0 24 24" className="ml-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 5v10m0 0l-4-4m4 4l4-4" />
+                <path d="M4 19h16" />
+            </svg>
+            </span>
+        </motion.div>
+        </a>
+        
+        {/* Dielectrons - download tile */}
+        <a
+        href="/assets/Dielectron_Eventas.pdf"
+        download="Dielectron_Eventas.pdf"
+        className="group block"
+        >
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer"
+        >
+            <h3 className="text-2xl font-semibold mb-2">
+                Predicting Large Hadron Collision Conditions
+            </h3>
+            <p className="text-gray-600">
+                Using AI / ML to predict characteristics of dielectron events in CERN high energy collisions.
+            </p>
+            <span className="mt-3 inline-flex items-center text-sm text-blue-700 group-hover:underline">
+                Download Stakeholder Presentation
+            <svg viewBox="0 0 24 24" className="ml-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 5v10m0 0l-4-4m4 4l4-4" />
+                <path d="M4 19h16" />
+            </svg>
+            </span>
+        </motion.div>
+        </a>
+        
+        {/* Experimentation - download tile */}
+        <a
+        href="/assets/Experiment.pdf"
+        download="Engagement_Experiment.pdf"
+        className="group block"
+        >
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer"
+        >
+            <h3 className="text-2xl font-semibold mb-2">
+                Enhancing Patient Engagement in Health Care
+            </h3>
+            <p className="text-gray-600">
+                Causal experimentation on the effectiveness of personalized and generic digital outreach strategies.
+            </p>
+            <span className="mt-3 inline-flex items-center text-sm text-blue-700 group-hover:underline">
+                Download Report
+            <svg viewBox="0 0 24 24" className="ml-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 5v10m0 0l-4-4m4 4l4-4" />
+                <path d="M4 19h16" />
+            </svg>
+            </span>
+        </motion.div>
+        </a>
+        
+        {/* Student Consent / Privacy - download tile */}
+        <a
+        href="/assets/Student_Consent_Privacy_Adaptive_Learning.pdf"
+        download="Student_Consent_Privacy_Adaptive_Learning.pdf"
+        className="group block"
+        >
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer"
+        >
+            <h3 className="text-2xl font-semibold mb-2">
+                AI in the Classroom
+            </h3>
+            <p className="text-gray-600">
+                Exploring the Intersection of Student Consent, Privacy, and Data Analytics in Adaptive Learning Platforms.
+            </p>
+            <span className="mt-3 inline-flex items-center text-sm text-blue-700 group-hover:underline">
+                Download Report
+            <svg viewBox="0 0 24 24" className="ml-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 5v10m0 0l-4-4m4 4l4-4" />
+                <path d="M4 19h16" />
+            </svg>
+            </span>
+        </motion.div>
+        </a>
+
       </div>
     </section>
   );
