@@ -239,7 +239,7 @@ function Projects() {
 
 function Contact() {
   return (
-    <section id="contact" className="py-24 bg-emerald-200 px-6 text-center">
+    <section id="contact" className="py-24 bg-blue-200 px-6 text-center">
       <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-4xl font-bold mb-6">Contact</motion.h2>
       <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.8 }} className="max-w-2xl mx-auto text-lg text-gray-800 mb-8">
         Interested in collaborating or have a question?
