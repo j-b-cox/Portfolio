@@ -220,7 +220,7 @@ function Projects() {
                 AI in the Classroom
             </h3>
             <p className="text-gray-600">
-                Exploring the Intersection of Student Consent, Privacy, and Data Analytics in Adaptive Learning Platforms.
+                Analyzing the Intersection of Student Consent, Privacy, and Data Analytics in Adaptive Learning Platforms.
             </p>
             <span className="mt-3 inline-flex items-center text-sm text-blue-700 group-hover:underline">
                 Download Report
