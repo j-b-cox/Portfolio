@@ -21,7 +21,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-blue-300 via-white to-white-100 px-6"
+      className="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-emerald-500 via-blue-300 to-white-100 px-6"
     >
       <motion.img
         src="/headshot.jpg"
@@ -239,9 +239,9 @@ function Projects() {
 
 function Contact() {
   return (
-    <section id="contact" className="py-24 bg-blue-200 px-6 text-center">
+    <section id="contact" className="py-24 bg-emerald-200 px-6 text-center">
       <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-4xl font-bold mb-6">Contact</motion.h2>
-      <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.8 }} className="max-w-2xl mx-auto text-lg text-gray-700 mb-8">
+      <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.8 }} className="max-w-2xl mx-auto text-lg text-gray-800 mb-8">
         Interested in collaborating or have a question?
       </motion.p>
       <motion.a href="mailto:jbcox@berkeley.edu" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.4, duration: 0.8 }} className="px-6 py-3 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition">
