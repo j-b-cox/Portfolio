@@ -117,34 +117,7 @@ function Projects() {
         </motion.div>
         </a>
         
-        {/* PMN - download tile */}
-        <a
-        href="placeholder"
-        download="placeholder"
-        className="group block"
-        >
-        <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer"
-        >
-            <h3 className="text-2xl font-semibold mb-2">
-                Visualizing NOAA Algae Observations.
-            </h3>
-            <p className="text-gray-600">
-                Using Javascript (d3.js) to plot 20+ years of US algae observations according to phylogeny, location, and datetime.
-            </p>
-            <span className="mt-3 inline-flex items-center text-sm text-blue-700 group-hover:underline">
-                Visit Webpage
-            <svg viewBox="0 0 24 24" className="ml-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M12 5v10m0 0l-4-4m4 4l4-4" />
-                <path d="M4 19h16" />
-            </svg>
-            </span>
-        </motion.div>
-        </a>
+        {/* PMs
         
         {/* Dielectrons - download tile */}
         <a
