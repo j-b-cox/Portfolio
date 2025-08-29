@@ -117,7 +117,33 @@ function Projects() {
         </motion.div>
         </a>
         
-        {/* PMs
+        {/* PMN - external website tile */}
+        <a
+        href="https://apps.ischool.berkeley.edu/phytoplankton/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group block"
+        aria-label="Open Visualizing NOAA Algae Observations (opens in a new tab)"
+        >
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer"
+        >
+            <h3 className="text-2xl font-semibold mb-2">
+            Visualizing NOAA Algae Observations
+            </h3>
+            <p className="text-gray-600">
+            Using JavaScript (D3.js) to plot 20+ years of US algae observations by phylogeny, location, and time.
+            </p>
+            <span className="mt-3 inline-flex items-center text-sm text-blue-700 group-hover:underline">
+            Visit webpage ↗
+            </span>
+        </motion.div>
+        </a>
+
         
         {/* Dielectrons - download tile */}
         <a
