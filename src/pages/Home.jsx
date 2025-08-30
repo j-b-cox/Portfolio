@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useState } from "react"
 
 function Navbar() {
   return (
@@ -251,6 +252,105 @@ function Contact() {
   );
 }
 
+function Testimonials() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const testimonials = [
+    {
+      name: "Alex Rivera",
+      role: "Senior Data Scientist, NOAA",
+      img: "/assets/testimonials/alex.jpg",
+      quote:
+        "Jesse’s blend of scientific rigor and practical engineering accelerated our workflow. His HAB forecasting work gave our team a clear, actionable path."
+    },
+    {
+      name: "Priya Shah",
+      role: "Product Manager, EdTech Startup",
+      img: "/assets/testimonials/priya.jpg",
+      quote:
+        "We leaned on Jesse to translate privacy requirements into analytics we could trust. He communicates complex tradeoffs simply and precisely."
+    },
+    {
+      name: "Marco DeLuca",
+      role: "Research Engineer, UC Berkeley",
+      img: "/assets/testimonials/marco.jpg",
+      quote:
+        "From data plumbing to model evaluation, Jesse delivered end-to-end. The code quality and documentation made handoff painless."
+    },
+    {
+      name: "Sofia Nguyen",
+      role: "ML Engineer, Healthcare",
+      img: "/assets/testimonials/sofia.jpg",
+      quote:
+        "Thoughtful, reliable, and fast. Jesse’s experiments were reproducible and the visualizations made stakeholder decisions much easier."
+    }
+  ];
+
+  return (
+    <section id="testimonials" className="py-20 bg-white px-6">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-10">Testimonials</h2>
+
+        <ul className="space-y-4">
+          {testimonials.map((t, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <li key={i} className="border border-gray-200 rounded-xl bg-white shadow-sm">
+                {/* Header row (clickable) */}
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  aria-controls={`testimonial-panel-${i}`}
+                  className="w-full flex items-center gap-4 p-4 text-left hover:bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <img
+                    src={t.img}
+                    alt={`${t.name} headshot`}
+                    className="h-12 w-12 rounded-full object-cover border border-gray-200"
+                  />
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-900">{t.name}</div>
+                    <div className="text-sm text-gray-600">{t.role}</div>
+                  </div>
+
+                  {/* Chevron */}
+                  <svg
+                    className={`h-5 w-5 text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.172l3.71-2.94a.75.75 0 11.94 1.16l-4.24 3.36a.75.75 0 01-.94 0l-4.24-3.36a.75.75 0 01.02-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+
+                {/* Smooth expanding panel (CSS grid trick for auto height) */}
+                <div
+                  id={`testimonial-panel-${i}`}
+                  className={`grid overflow-hidden transition-[grid-template-rows] duration-300 ease-out ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="min-h-0">
+                    <p className="px-4 pt-4 pb-4 text-gray-700">
+                      {t.quote}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -259,6 +359,7 @@ export default function Home() {
       <About />
       <Projects />
       <Contact />
+      <Testimonials />   {/* <- new section */}
     </>
   );
 }
