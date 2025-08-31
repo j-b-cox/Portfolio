@@ -359,7 +359,6 @@ export default function Home() {
       <About />
       <Projects />
       <Contact />
-      <Testimonials />   {/* <- new section */}
     </>
   );
 }
