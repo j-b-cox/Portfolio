@@ -218,7 +218,7 @@ function Projects() {
             className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition cursor-pointer"
         >
             <h3 className="text-2xl font-semibold mb-2">
-                AI in the Classroom
+                Discussing the Ethics of AI in the Classroom
             </h3>
             <p className="text-gray-600">
                 Analyzing the Intersection of Student Consent, Privacy, and Data Analytics in Adaptive Learning Platforms.
